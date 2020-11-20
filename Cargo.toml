@@ -8,7 +8,7 @@ edition = "2018"
 
 
 [dependencies]
-geo="0.14.2"
+geo="0.15.0"
 num-traits="0.2.12"
 
 [dev-dependencies]
