@@ -1,17 +1,20 @@
+
 mod polygon_contains_test {
   extern crate pretty_assertions;
+
+  use rust_d3_array::extent::extent;
 
   #[cfg(test)]
   use pretty_assertions::assert_eq;
 
 #[test]
-fn returns_the_least_and_greatest_numeric => {
-  assert_eq!(extent(vec![1], [1,1]), None);
-  assert_eq!(d3.extent(vec![1], None), [1, 1]);
-  assert_eq!(d3.extent(vec![5, 1, 2, 3, 4], None), [1, 5]);
-  assert_eq!(d3.extent(vec![20, 3], None), [3, 20]);
-  assert_eq!(d3.extent(vec![3, 20], None), [3, 20]);
-});
+fn returns_the_least_and_greatest_numeric() {
+  assert_eq!(extent(vec![1], None), [1,1]);
+  assert_eq!(extent(vec![1], None), [1, 1]);
+  assert_eq!(extent(vec![5, 1, 2, 3, 4], None), [1, 5]);
+  assert_eq!(extent(vec![20, 3], None), [3, 20]);
+  assert_eq!(extent(vec![3, 20], None), [3, 20]);
+}
 
 }
 // tape("extent(array) returns the least and greatest lexicographic value for strings", (test) => {
