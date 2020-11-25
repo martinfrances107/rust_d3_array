@@ -1,5 +1,22 @@
 use std::cmp::PartialOrd;
 
+pub fn extent_f64(
+    values_in: Vec<f64>,
+    value_of: Option<Box<dyn Fn(f64, f64, f64) -> f64>>,
+) -> [f64; 2] {
+    let mut values = values_in.clone();
+    match value_of {
+        None => {
+            // Drop NAN early.
+            values.retain(|&x| !x.is_nan());
+        }
+        Some(_) => {
+            unimplemented!("Not yet supported: extent_f64() valueof function parameter.");
+        }
+    }
+    extent(values, value_of)
+}
+
 pub fn extent<T>(values: Vec<T>, value_of: Option<Box<dyn Fn(T, T, T) -> T>>) -> [T; 2]
 where
     T: PartialOrd + Copy,
@@ -8,7 +25,6 @@ where
     let mut max: Option<T> = None;
     match value_of {
         None => {
-            
             for value in values {
                 match min {
                     None => {
@@ -33,11 +49,9 @@ where
             }
         }
         Some(_) => {
-            unimplemented!("Des not yet support valueof function.");
+            unimplemented!("Not yet supported: extent() valueof function parameter.");
         }
-        
-        
-}
+    }
 
     return [min.unwrap(), max.unwrap()];
 }
