@@ -1,10 +1,10 @@
+#[cfg(test)]
 mod polygon_contains_test {
     extern crate pretty_assertions;
 
     use rust_d3_array::extent::extent;
     use rust_d3_array::extent::extent_f64;
 
-    #[cfg(test)]
     use pretty_assertions::assert_eq;
 
     #[test]

@@ -4,7 +4,7 @@ pub fn extent_f64(
     values_in: Vec<f64>,
     value_of: Option<Box<dyn Fn(f64, f64, f64) -> f64>>,
 ) -> [f64; 2] {
-    let mut values = values_in.clone();
+    let mut values = values_in;
     match value_of {
         None => {
             // Drop NAN early.
