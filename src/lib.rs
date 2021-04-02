@@ -1,5 +1,6 @@
 #![allow(clippy::needless_return)]
 pub mod extent;
+pub mod merge;
 
 #[cfg(test)]
 mod tests {
