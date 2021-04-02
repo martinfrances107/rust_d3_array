@@ -1,8 +1,5 @@
-// function* flatten(arrays) {
-//     for (const array of arrays) {
-//       yield* array;
-//     }
-//   }
+/// Original code uses a generator pattern
+/// Generators in rust are unstable.
 
 #[inline]
 pub fn merge<T>(arrays: Vec<Vec<T>>) -> Vec<T> {
