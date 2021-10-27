@@ -1,5 +1,4 @@
 use geo::CoordFloat;
-use num_traits::FromPrimitive;
 
 // use num_traits::ceil;
 // export default function(start, stop, step) {
@@ -21,7 +20,7 @@ use num_traits::FromPrimitive;
 /// The output range does not include 'stop'.
 pub fn range<T>(start: T, stop: T, step: T) -> Vec<T>
 where
-    T: CoordFloat + FromPrimitive,
+    T: CoordFloat,
 {
     // TODO must find a way to pre-calculate n
     // let delta = ((stop - start) / step).ceil();
