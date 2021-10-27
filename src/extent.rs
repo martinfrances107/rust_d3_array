@@ -1,5 +1,6 @@
 use std::cmp::PartialOrd;
 
+/// Return the min and max simultaneously.
 pub fn extent_f64(
     values_in: Vec<f64>,
     value_of: Option<Box<dyn Fn(f64, f64, f64) -> f64>>,
@@ -17,6 +18,7 @@ pub fn extent_f64(
     extent(values, value_of)
 }
 
+/// Return the min and max simultaneously.
 pub fn extent<T>(values: Vec<T>, value_of: Option<Box<dyn Fn(T, T, T) -> T>>) -> [T; 2]
 where
     T: PartialOrd + Copy,
@@ -53,5 +55,5 @@ where
         }
     }
 
-    return [min.unwrap(), max.unwrap()];
+    [min.unwrap(), max.unwrap()]
 }

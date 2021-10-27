@@ -7,7 +7,7 @@ This is a port of the [d3-geo](https://github.com/d3/d3-array) library into a RU
 Early draft port - sub module by submodule. Sub module porting means the test have also been ported.
 No API stability guarentees.
 
-For the moment I need the extent module to partially succeed.
+For the moment I need the extent and ranges modules.
 
 
 ## Phase 2

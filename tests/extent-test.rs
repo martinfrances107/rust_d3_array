@@ -1,5 +1,5 @@
 #[cfg(test)]
-mod polygon_contains_test {
+mod extent_test {
     extern crate pretty_assertions;
 
     use rust_d3_array::extent::extent;

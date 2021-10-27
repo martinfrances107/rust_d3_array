@@ -8,6 +8,8 @@ edition = "2018"
 
 
 [dependencies]
+geo={git = "https://github.com/martinfrances107/geo.git", branch="cyclic_match", features=["use-approx"] }
+num-traits = "0.2"
 
 [dev-dependencies]
 pretty_assertions = "0.7.2"
