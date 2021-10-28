@@ -3,9 +3,9 @@ name = "rust_d3_array"
 version = "0.1.0"
 authors = ["martin frances <martinfrances107@hotmail.com>"]
 edition = "2018"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
+description = "A port of D3/d3-array into rust"
+readme = "README.md"
+repository="https://github.com/martinfrances107/rust_d3_array"
 
 [dependencies]
 geo={git = "https://github.com/martinfrances107/geo.git", branch="cyclic_match", features=["use-approx"] }
