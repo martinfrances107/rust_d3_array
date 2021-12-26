@@ -8,7 +8,7 @@ readme = "README.md"
 repository="https://github.com/martinfrances107/rust_d3_array"
 
 [dependencies]
-geo={git = "https://github.com/martinfrances107/geo.git", branch="cyclic_match", features=["use-approx"] }
+geo={git = "https://github.com/martinfrances107/geo.git", branch="cyclic_match" }
 num-traits = "0.2"
 
 [dev-dependencies]
