@@ -12,4 +12,4 @@ geo="0.18.0"
 num-traits = "0.2"
 
 [dev-dependencies]
-pretty_assertions = "0.7.2"
+pretty_assertions = "1.0.0"
