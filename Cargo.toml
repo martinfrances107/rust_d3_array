@@ -8,7 +8,7 @@ readme = "README.md"
 repository="https://github.com/martinfrances107/rust_d3_array"
 
 [dependencies]
-geo="0.21.0"
+geo="0.22.0"
 num-traits = "0.2"
 
 [dev-dependencies]
