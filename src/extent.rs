@@ -1,10 +1,9 @@
 use std::cmp::PartialOrd;
 
+type ValueOfFn<T> = Box<dyn Fn(T, T, T) -> T>;
+
 /// Return the min and max simultaneously.
-pub fn extent_f64(
-    values_in: Vec<f64>,
-    value_of: Option<Box<dyn Fn(f64, f64, f64) -> f64>>,
-) -> [f64; 2] {
+pub fn extent_f64(values_in: Vec<f64>, value_of: Option<ValueOfFn<f64>>) -> [f64; 2] {
     let mut values = values_in;
     match value_of {
         None => {
@@ -19,7 +18,7 @@ pub fn extent_f64(
 }
 
 /// Return the min and max simultaneously.
-pub fn extent<T>(values: Vec<T>, value_of: Option<Box<dyn Fn(T, T, T) -> T>>) -> [T; 2]
+pub fn extent<T>(values: Vec<T>, value_of: Option<ValueOfFn<T>>) -> [T; 2]
 where
     T: PartialOrd + Copy,
 {
